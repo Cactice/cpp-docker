@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  cling_jupyterlab:
+    env_file:
+      - .env
+    build: .
+    user: root
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workdir:/workdir
